@@ -1,9 +1,7 @@
-name: Build Test and Push Docker Image
+name: RefCard CI CD
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
     branches: [ "main" ]
 
 jobs:
@@ -42,4 +40,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/m347-ref-card-01:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/cicd_refcard1:latest
